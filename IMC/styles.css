@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #000000, #383838, #5a5a5a, #7a7a7a);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: white;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-box, .boxresultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .input-box input {
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .input-box button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .input-box button:hover {
+    background-color: #45a049;
+  }
+  
+  .boxresultado {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1s ease;
+  }
+  
+  .boxresultado.expanded {
+    display: block;
+    width: 300px;
+    opacity: 1;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #classification {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
